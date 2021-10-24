@@ -9,17 +9,16 @@ const path = require('path')
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-	console.log(store.get('data'))
-	res.sendFile('home.html', {root: './public/html'})
+  res.sendFile('home.html', { root: './public/html' })
 })
 
 
 app.get('/callback', (req, res) => {
-	if(req?.query?.code) {
-		getKey(req, res)
-	} else {
-		return res.send('error')
-	}
+  if (req.query.code) {
+    res.sendFile('home.html', { root: './public/html' })
+  } else {
+    res.sendFile('home.html', { root: './public/html' })
+  }
 })
 
 app.listen(500, () => console.log('App listening at http://localhost:500'));
