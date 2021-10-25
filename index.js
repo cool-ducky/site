@@ -14,11 +14,14 @@ app.get('/', (req, res) => {
 
 
 app.get('/callback', (req, res) => {
-  if (req.query.code) {
-    res.sendFile('home.html', { root: './public/html' })
-  } else {
-    res.sendFile('home.html', { root: './public/html' })
-  }
+ 
+    res.sendFile('callback.html', { root: './public/html' })
+ 
+})
+
+app.get('/token', (req, res) => {
+  const getToken = require('./src/getKey')
+  getToken(req, res)
 })
 
 app.listen(500, () => console.log('App listening at http://localhost:500'));
