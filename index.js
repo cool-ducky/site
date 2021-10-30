@@ -12,12 +12,18 @@ app.get('/', (req, res) => {
   res.sendFile('home.html', { root: './public/html' })
 })
 
+app.get("/jam", (req, res) => {
+  res.sendFile("jam.html", {
+    root: "./public/html"
+  })
+})
 
 app.get('/callback', (req, res) => {
  
     res.sendFile('callback.html', { root: './public/html' })
  
 })
+
 
 app.get('/token', (req, res) => {
   const getToken = require('./src/getKey')

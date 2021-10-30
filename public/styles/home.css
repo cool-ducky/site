@@ -40,15 +40,20 @@
     padding: 3rem calc((100vw - 1300px) / 2);
     height: auto;
     text-align: center;
-    background-image: linear-gradient(to bottom right, #571645, #e96024);
+    background-image: linear-gradient(to right, #571645, #e96024);
   }
 
   .jam h1 {
+    color: whitesmoke;
     font-size: 40px;
     padding-bottom: 10px;
+    text-shadow: 
+    0 -1px 0 #fff, 
+    0 2px 0 #2e2e2e
   }
 
   .jam h2 {
+    color: rgb(255, 225, 225);
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 10px;
@@ -62,6 +67,7 @@
   }
 
   .prizes {
+    color: white;
     padding-bottom: 30px;
     font-size: 20px;
   }
