@@ -8,6 +8,10 @@ const path = require('path')
 
 app.use(express.static(path.join(__dirname, 'public')))
 
+app.get('/hi', (req, res) => {
+  res.send('hi babe')
+})
+
 app.get('/', (req, res) => {
   res.sendFile('home.html', { root: './public/html' })
 })
