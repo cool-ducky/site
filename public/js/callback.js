@@ -4,7 +4,7 @@ const doStuff = async () => {
     const code = urlParams.get('code')
     if (!code) return window.location.replace("http://localhost:500");
     const getToken = async () => {
-        const response = await fetch(`http://localhost:500/token?code=${code}`, {
+        const response = await fetch(`https://imagine.cf/token?code=${code}`, {
             method: 'GET',
         })
         const json = await response.json()
@@ -12,6 +12,7 @@ const doStuff = async () => {
         return json.msg
     }
     const user = await getToken()
+    console.log(user)
     const avatar = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`
     document.getElementById('avatar').src = avatar
     document.getElementById('email').innerHTML = user.email

@@ -11,9 +11,9 @@ module.exports = async (req, res) => {
                 client_secret: process.env.client_secret,
                 code,
                 grant_type: 'authorization_code',
-                redirect_uri: `http://localhost:500/callback`,
+                redirect_uri: `https://imagine.cf/callback`,
                 scope: 'email',
-            }),
+            })
         })
         const { data } = codeData
         if (!data.access_token) return res.send(JSON.stringify({msg: 'Invalid Code!'}))
@@ -30,5 +30,6 @@ module.exports = async (req, res) => {
       return res.send(JSON.stringify({msg: response.data}))
     } catch (err) {
         if (err) res.send(JSON.stringify({msg: 'Invalid Code!'}))
+        console.log(err)
     }
 }
