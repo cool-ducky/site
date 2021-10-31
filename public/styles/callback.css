@@ -26,73 +26,36 @@
     background: black;
   }
 
-  .user {
-    margin: auto;
-    border: 3px solid green;
-    padding: 10px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -50px;
-    margin-left: -50px;
-    width: 100px;
-    height: 100px;
-    background-color: blue;
-  }
-
   .user img {
-      border-radius: 50%;
+  border-radius: 50%;
+}
+
+  .user {
+    color: white;
   }
 
+  .user h2 {
+    padding-bottom: 30px;
+  }
 
-  form button {
-    background-image: linear-gradient(to top, #540454 0%, #3f0b40 100%);
-    padding: 14px 32px;
-    border: none;
-    border-radius: 4px;
-    color: white;
-    cursor:pointer;
-    position: relative;
-    transition: all 0.35s;
-    outline: none;
-    font-family: 'demibold';
-    font-size: 20px;
-    top: 10px;
-}
-
-form button a {
-    position: relative;
-    z-index: 2;
-    color: white;
-    text-decoration: none;
-}
-
-form button:after {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: purple;
-    transition: all 0.35s;
-    border-radius: 4px;
-}
-
-form button:hover {
-    color: white;
-}
-
-form button:hover:after {
-    width: 100%;
-}
-  
 .hero {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   height: auto;
   padding: 3rem calc((100vw - 1300px) / 2);
-  background: #1b1c2b;
+  background-image: linear-gradient(to right, #571645, #e96024);
+  text-align: center;
+}
+
+textarea {
+  width: 60%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
 }
 
 footer {
