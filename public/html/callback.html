@@ -21,13 +21,13 @@
         <div class='user'>
             <img id='avatar' alt='avatar' height='100'>
             <h1 id='tag'></h1>
-            <h2 id='email'>email@gmail.com</h2>
-            <form>
+            <h2 id='email'></h2>
+            <form action="/" method="GET" id='form'>
               <label for="why_ban">Why were you banned?</label> <br>
-                <textarea name='why_ban' required></textarea> <br>
-                <label for="why_unban">Why should you be unbanned?</label> <br>
-                <textarea name='why_unban' required></textarea> <br>
-                <input class='submit' type="submit" value="Submit">
+                <textarea name='why_ban' id='ban' required></textarea> <br>
+                <label for="why_unban"  required>Why should you be unbanned?</label> <br>
+                <textarea name='why_unban'id='unban' required></textarea> <br>
+                <input class='submit' type="submit" value="Submit"">
             </form>
         </div>
 
