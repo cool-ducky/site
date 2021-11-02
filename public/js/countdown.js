@@ -1,4 +1,4 @@
-let end = new Date('11/3/2021 12:00 AM EST');
+let end = new Date('11/3/2021 3:00 AM EST');
 
 let _second = 1000;
 let _minute = _second * 60;
