@@ -10,14 +10,13 @@
     <meta property="og:title" content="IGP BOT JAM" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://imagine.cf/jam" />
-    <meta property="og:image" content="https://img.itch.zone/aW1nLzU5NjUxOTEucG5n/original/7VgQZo.png" />
+    <meta property="og:image" content="" />
     <meta property="og:description"
         content="You will be challenged to make the Best Discord Bot in one week, to win some amazing prizes." />
-    <meta name="theme-color" content="#000000">
-    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/50368787?v=4">
-
+    <meta name="theme-color" content="#fffff">
+    <link rel="icon" type="image/png" href="https://cdn.discordapp.com/attachments/878183643288334356/905091540270088302/jam.png">
+    <script type="text/javascript" src="../js/countdown.js"></script>
 </head>
-<script type="text/javascript" src="../js/timer.js"></script>
 <body>
     <nav>
         <div class="logo">
@@ -26,13 +25,10 @@
         </div>
         <div class="nav-items">
             <a
-                href="https://discord.com/api/oauth2/authorize?client_id=900535112955998271&redirect_uri=https%3A%2F%2Fimagine.cf%2Fcallback&response_type=code&scope=email%20identify">Ban
+                href="https://discord.com/api/oauth2/authorize?client_id=900535112955998271&redirect_uri=http%3A%2F%2Flocalhost%3A500%2Fcallback&response_type=code&scope=email%20identify">Ban
                 Appeals</a>
         </div>
     </nav>
-    <div class='timer-container'>
-      <p id='timer' class="timer"></p>
-    </div>
     <section class="hero">
         <div class="hero-container">
             <div class="img-container">
@@ -44,26 +40,28 @@
             <h1 class="jam-description">
                 Now's your chance to a [[BIG SHOT]] Code a <span style="color:lightgreen"> creative </span> Discord Bot from the given theme and win Discord Nitro!
                 <br><br>
-                You will get <strong> One Week </strong> time to code a Discord Bot and submit it into our Discord
+                You wll only get <strong> one week </strong> time to code a Discord Bot and submit it into our Discord
                 Server!
                 <br>
                 Special thanks to <strong> <span style="color: rgb(255, 58, 255);"> Kimizu#0001 </span> </strong> for
                 making this JAM possible!
+            </h1>
+            <h1 class="jam-title"> Prize </h1>
+            <h1 class="jam-description">
+                <span style="color: yellow;font-size: 5vh">1st Prize - $99.99 Discord Nitro</span>
+                <br>
+                <span style="color: rgb(0, 255, 21);font-size: xx-large;">2nd Prize - $49.99 Discord Nitro Classic</span>
+                <br>
+                <span style="color: rgb(0, 225, 255);font-size: xx-large;">3rd Prize - $4.99 Discord Nitro Classic</span>
             </h1>
             <h1 class="jam-title"> Requirements </h1>
             <h1 class="jam-description">
                 Your bot must be a public repositary on Github so we can confirm that the code is actually written by
                 you and is not copied.
                 <br>
-                <strong> Join These Two Servers </strong>
-                <br>
-                <a href="https://discord.gg/MhKjkbr" style="color: orange;">IGP's Stars</a>&nbsp;(Bot submissions will
+                Must be in our server <a href="https://discord.gg/MhKjkbr" style="color: orange;">IGP's Stars</a>&nbsp;(Bot submissions will
                 be here)
                 <br>
-                <a href="https://discord.gg/jzAm5EJHyv" style="color: rgb(255, 159, 80);">🎃✦ Luphic GFXヾ</a> (Bots will
-                be judged here)
-                <br>
-                Note: You will be disqualified if you are not in both servers.
             </h1>
             <h1 class="jam-title"> Submit Your Bot </h1>
             <h1 class="jam-description">
@@ -80,10 +78,23 @@
             </h1>
             <h1 class="jam-title"> Judges </h1>
             <h1 class="jam-description">
-                Bots will be judged and tested in <a href="https://discord.gg/jzAm5EJHyv" style="color: rgb(255, 159, 80);">🎃✦ Luphic GFXヾ</a> besure to be there to test out others bot and show-off yours aswell!
-                <br>
-                Judges: Imagine#
+                Imagine#0219, Kimizu#0001, douma#1257, Euri C.#5110, 𝙆𝙞𝙧𝙖#0050<br> and our staff team.
             </h1>
+            <h1 class="jam-title"> Theme </h1>
+            <h1 class="jam-description" id="theme" style="font-size: 40px;">
+                Will be revealed when jam starts
+            </h1>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h1 class="jam-description" id="theme" style="font-size: 40px;">
+                Jam Starts In
+                <div class="timer" id="countdown">
+                    
+                </div>
+                </h1>
+                <br> <br><br> <br>
         </div>
     </section>
     <footer>
@@ -108,5 +119,4 @@
     </footer>
     </section>
 </body>
-
 </html>
