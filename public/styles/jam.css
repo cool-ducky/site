@@ -48,6 +48,16 @@
   nav a:hover {
     text-decoration: underline;
   }
+
+  .timer-container {
+    background: #1b1c2b;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+.timer {
+  color: white;
+}
   
   .jam {
     padding: 3rem calc((100vw - 1300px) / 2);
