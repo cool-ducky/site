@@ -18,7 +18,7 @@ function showRemaining() {
 
         clearInterval(timer);
         document.getElementById('countdown').innerHTML = 'STARTED!';
-        document.getElementById("theme").innerHTML = "H"
+        document.getElementById("theme").innerHTML = "Halloween"
         document.getElementById("theme").style = "color: orange;font-size: 80px;"
         return;
     }
