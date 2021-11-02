@@ -109,6 +109,15 @@
     background-color: tomato;
   }
 
+  .timere {
+    margin-top: 20px;
+    padding: 15px 15px;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: tomato;
+  }
+
+
   .hero-container {
     display: grid;
     background: #1b1c2b;
