@@ -4,10 +4,12 @@ const axios = require('axios').default
 const store = require('store')
 const getKey = require('./src/getKey')
 const app = express();
+const bodyParser = require('body-parser');
 const path = require('path')
 
 app.use(express.static(path.join(__dirname, 'public')))
-app.use(express.json())
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 app.post('/hook', (req, res) => {
   const hook = require('./src/webhook')
@@ -34,6 +36,10 @@ app.get('/callback', (req, res) => {
 app.get('/token', (req, res) => {
   const getToken = require('./src/getKey')
   getToken(req, res)
+})
+
+app.get('/appeals', (req, res) => {
+  res.redirect("https://discord.com/api/oauth2/authorize?client_id=900535112955998271&redirect_uri=https%3A%2F%2Fimagine.cf%2Fcallback&response_type=code&scope=email%20identify")
 })
 
 app.listen(500, () => console.log('App listening at http://localhost:500'));
