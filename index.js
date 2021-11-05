@@ -18,6 +18,11 @@ app.post('/hook', (req, res) => {
   hook(req, res)
 })
 
+app.post('/railway', (req, res) => {
+  const railway = require('./src/railway')
+  railway(req, res)
+})
+
 app.get('/', (req, res) => {
   res.sendFile('home.html', { root: './public/html' })
 })
