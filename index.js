@@ -1,4 +1,5 @@
 const express = require('express')
+const mongoose = require('mongooose')
 const { verifyKeyMiddleware } = require('discord-interactions')
 require('dotenv').config()
 const axios = require('axios').default
@@ -13,6 +14,11 @@ const port = process.env.PORT || 3000
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+mongoose.connect(process.env.mongo_url, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
 
 app.post('/interactions', verifyKeyMiddleware(process.env.public_key), (req, res) => {
   res.send({

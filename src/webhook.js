@@ -1,7 +1,14 @@
 const axios = require('axios').default
+const appeal = require('./schema')
 module.exports = async (req, res) => {
   try {
     const data = req.body
+    if(!data?.user) return;
+    await appeal.create({
+      user: data.user.username,
+      email: data.user.email,
+      id: data.user.id
+    })
     const request = {
       username: data.user.username,
       avatar_url: data.avatar,
