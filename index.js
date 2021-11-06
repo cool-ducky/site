@@ -1,5 +1,5 @@
 const express = require('express')
-const mongoose = require('mongooose')
+const mongoose = require('mongoose')
 const { verifyKeyMiddleware } = require('discord-interactions')
 require('dotenv').config()
 const axios = require('axios').default
