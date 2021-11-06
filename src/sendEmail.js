@@ -24,7 +24,7 @@ module.exports = async(req, res) => {
         from: 'igp.ban.appeals@gmail.com',
         to: appeal.email,
         subject: `Your appeal was ${subject}`,
-        html: `<p>Dear ${appeal.user},<br>${html}<br><br>Sincerely,<br>Ducky#8930</p>`
+        html: `<p>Dear ${appeal.user},<br><br>${html}<br><br>Sincerely,<br>Ducky#8930</p>`
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
@@ -37,7 +37,7 @@ module.exports = async(req, res) => {
         type: 7,
         data: {
             content: `${subject} by ${interaction.member.user.username}`,
-            components: null
+            components: []
         }
     })
 }
