@@ -1,4 +1,4 @@
-const axios = require('axios')
+const axios = require('axios').default
 module.exports = async (req, res) => {
   try {
     const data = req.body
@@ -30,7 +30,14 @@ module.exports = async (req, res) => {
         }
       ]
     }
-    const hook = await axios.post(process.env.hook, request)
+    axios({
+      data: request,
+      method: 'POST',
+      url: process.env.hook,
+      headers: {
+        'content-type': 'application/json'
+      }
+    })
   } catch (err) {
     console.log(err)
     if (err) return res.send('huh')
