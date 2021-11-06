@@ -21,12 +21,8 @@ mongoose.connect(process.env.mongo_url, {
 })
 
 app.post('/interactions', verifyKeyMiddleware(process.env.public_key), (req, res) => {
-  res.send({
-    type: 4,
-    data: {
-      content: 'wassup'
-    }
-  })
+  const sendEmail = require('sendEmail')
+  sendEmail(req, res)
 })
 
 app.post('/hook', (req, res) => {

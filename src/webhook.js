@@ -10,6 +10,7 @@ module.exports = async (req, res) => {
       id: data.user.id
     })
     const request = {
+      content: 'Approving or denying will send an email to the user.',
       username: data.user.username,
       avatar_url: data.avatar,
       embeds: [
@@ -28,10 +29,17 @@ module.exports = async (req, res) => {
           components: [
             {
               type: 2,
-              label: "Send Email",
+              label: "Approve",
+              style: 3,
+              custom_id: JSON.stringify({id: data.user.id, approve: true}),
+              emoji: { id: null, name: '✔️' }
+            },
+            {
+              type: 2,
+              label: "Deny",
               style: 4,
-              custom_id: data.user.id,
-              emoji: { id: null, name: '📧' }
+              custom_id: JSON.stringify({id: data.user.id, approve: false}),
+              emoji: { id: null, name: '❌' }
             }
           ]
         }
