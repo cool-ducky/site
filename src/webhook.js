@@ -2,6 +2,7 @@ const axios = require('axios').default
 const appeal = require('./schema')
 module.exports = async (req, res) => {
   try {
+    res.json({requestBody: req.body})
     const data = req.body
     if(!data?.user) return;
     await appeal.create({
