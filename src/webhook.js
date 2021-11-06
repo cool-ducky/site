@@ -30,16 +30,14 @@ module.exports = async (req, res) => {
             {
               type: 2,
               label: "Approve",
-              style: 2,
-              custom_id: JSON.stringify({id: data.user.id, approve: true}),
-              emoji: { id: null, name: '✔️' }
+              style: 3,
+              custom_id: JSON.stringify({id: data.user.id, approve: true})
             },
             {
               type: 2,
               label: "Deny",
-              style: 2,
-              custom_id: JSON.stringify({id: data.user.id, approve: false}),
-              emoji: { id: null, name: '❌' }
+              style: 4,
+              custom_id: JSON.stringify({id: data.user.id, approve: false})
             }
           ]
         }
