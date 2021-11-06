@@ -21,7 +21,7 @@ mongoose.connect(process.env.mongo_url, {
 })
 
 app.post('/interactions', verifyKeyMiddleware(process.env.public_key), (req, res) => {
-  const sendEmail = require('sendEmail')
+  const sendEmail = require('./src/sendEmail')
   sendEmail(req, res)
 })
 
