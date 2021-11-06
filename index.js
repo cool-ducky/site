@@ -1,4 +1,5 @@
 const express = require('express')
+const { verifyKeyMiddleware } = require('discord-interactions')
 require('dotenv').config()
 const axios = require('axios').default
 const store = require('store')
@@ -12,6 +13,15 @@ const port = process.env.PORT || 3000
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+app.post('/interactions', verifyKeyMiddleware(process.env.public_key), (req, res) => {
+  res.send({
+    type: 4,
+    data: {
+      content: 'wassup'
+    }
+  })
+})
 
 app.post('/hook', (req, res) => {
   const hook = require('./src/webhook')
@@ -34,9 +44,7 @@ app.get("/jam", (req, res) => {
 })
 
 app.get('/callback', (req, res) => {
- 
-    res.sendFile('callback.html', { root: './public/html' })
- 
+  res.sendFile('callback.html', { root: './public/html' })
 })
 
 
