@@ -6,14 +6,11 @@ const axios = require('axios').default
 const store = require('store')
 const getKey = require('./src/getKey')
 const app = express();
-const bodyParser = require('body-parser');
 const path = require('path')
 
 const port = process.env.PORT || 3000
 
 app.use(express.static(path.join(__dirname, 'public')))
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
 
 mongoose.connect(process.env.mongo_url, {
   useNewUrlParser: true,
