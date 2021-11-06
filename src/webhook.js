@@ -24,7 +24,7 @@ module.exports = async (req, res) => {
               label: "Send Email",
               style: 4,
               custom_id: data.user.id,
-              emoji: '📧'
+              emoji: { id: null, name: '📧' }
             }
           ]
         }
