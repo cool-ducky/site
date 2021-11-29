@@ -37,6 +37,10 @@ app.get('/', (req, res) => {
   res.sendFile('home.html', { root: './public/html' })
 })
 
+app.get('/jam-winner', (req, res) => {
+  res.send("benny")
+})
+
 app.get("/jam", (req, res) => {
   res.sendFile("jam.html", {
     root: "./public/html"
