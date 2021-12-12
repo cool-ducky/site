@@ -8,7 +8,7 @@ const doStuff = async () => {
       method: 'GET',
     })
     const json = await response.json()
-    if (json.msg == 'Invalid Code!') return window.location.replace("http://localhost:500");
+    //if (json.msg == 'Invalid Code!') return window.location.replace("http://localhost:500");
     return json.msg
   }
   const user = await getToken()
