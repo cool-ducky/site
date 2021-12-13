@@ -13,7 +13,7 @@ const port = process.env.PORT || 3000
 app.use(express.json())
 app.use(express.static(path.join(__dirname, 'public')))
 
-/*mongoose.connect(process.env.mongo_url, {
+mongoose.connect(process.env.mongo_url, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.post('/interactions', verifyKeyMiddleware(process.env.public_key), (req, res) => {
   const sendEmail = require('./src/sendEmail')
   sendEmail(req, res)
-})*/
+})
 
 app.post('/hook', (req, res) => {
   const hook = require('./src/webhook')
