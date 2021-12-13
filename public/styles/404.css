@@ -1,0 +1,33 @@
+@font-face {
+    font-family: "demibold";
+    src: url("./demibold.otf");
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    display: table;
+}
+
+.hero {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: demibold;
+    background-color: #1b1c2b;
+}
+
+h1 {
+    font-size: 150px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 30px;
+    color: #E1D9D1;
+}

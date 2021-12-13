@@ -13,7 +13,7 @@ const port = process.env.PORT || 3000
 app.use(express.json())
 app.use(express.static(path.join(__dirname, 'public')))
 
-mongoose.connect(process.env.mongo_url, {
+/*mongoose.connect(process.env.mongo_url, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
@@ -21,25 +21,17 @@ mongoose.connect(process.env.mongo_url, {
 app.post('/interactions', verifyKeyMiddleware(process.env.public_key), (req, res) => {
   const sendEmail = require('./src/sendEmail')
   sendEmail(req, res)
-})
+})*/
 
 app.post('/hook', (req, res) => {
   const hook = require('./src/webhook')
   hook(req, res)
 })
 
-app.post('/railway', (req, res) => {
-  const railway = require('./src/railway')
-  railway(req, res)
-})
-
 app.get('/', (req, res) => {
   res.sendFile('home.html', { root: './public/html' })
 })
 
-app.get('/jam-winner', (req, res) => {
-  res.send("benny")
-})
 
 app.get("/jam", (req, res) => {
   res.sendFile("jam.html", {
@@ -57,8 +49,12 @@ app.get('/token', (req, res) => {
   getToken(req, res)
 })
 
+app.get('*', function(req, res){
+  res.sendFile('404.html', { root: './public/html' })
+});
+
 app.get('/appeals', (req, res) => {
   res.redirect("https://discord.com/api/oauth2/authorize?client_id=900535112955998271&redirect_uri=https%3A%2F%2Fimagine.cf%2Fcallback&response_type=code&scope=email%20identify")
 })
 
-app.listen(port, () => console.log('App listening at http://localhost:500'))
+app.listen(port, () => console.log(`App listening at http://localhost:${port}`))
