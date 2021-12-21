@@ -1,102 +1,11 @@
-@font-face {
-    font-family: "demibold";
-    src: url("./demibold.otf");
+.top-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: auto;
+  padding: 3rem calc((100vw - 1300px) / 2);
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "demibold"
-  }
-  
-  nav {
-    height: 80px;
-    background: black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0rem calc((100vw - 1300px) / 2);
-  }
-  
-  .logo {
-    font-size: 40px;
-    font-weight: bold;
-    padding: 0 2rem;
-  }
-  
-  nav a {
-    text-decoration: none;
-    color: white;
-    padding: 0 1.5rem;
-    font-size: 20px;
-  }
-  
-  nav a:hover {
-    text-decoration: underline;
-  }
-  
-  .jam {
-    padding: 3rem calc((100vw - 1300px) / 2);
-    height: auto;
-    text-align: center;
-    background-image: linear-gradient(to right, #571645, #e96024);
-  }
-
-  .jam h1 {
-    color: whitesmoke;
-    font-size: 40px;
-    padding-bottom: 10px;
-    text-shadow: 
-    0 -1px 0 #fff, 
-    0 2px 0 #2e2e2e
-  }
-
-  .jam h2 {
-    color: rgb(255, 225, 225);
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 10px;
-  }
-
-  .prizes h3 img {
-    position: relative;
-    top: 4px;
-    width: 25px;
-    height: 25px;
-  }
-
-  .prizes {
-    color: white;
-    padding-bottom: 30px;
-    font-size: 20px;
-  }
-
-  .jam .button{
-    border-radius: 4px;
-    transition-duration: 0.4s;
-    background-color: #5865F2;
-    padding: 14px 40px;
-    border: none;
-    color: white;
-    font-size: 20px;
-    text-decoration: none;
-  }
-
-  .jam .button:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    cursor: pointer;
-  }
-
-  .hero-container {
-    display: grid;
-    background: #1b1c2b;
-    grid-template-columns: 1fr 1fr;
-    height: auto;
-    padding: 3rem calc((100vw - 1300px) / 2);
-  }
-  
-  .column-left {
+.column-left {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -109,6 +18,11 @@
     color: #04bccc;
     margin-bottom: 1rem;
     font-size: 3rem;
+  }
+
+  .top-message {
+    text-align: center;
+    align-items: center;
   }
   
   .column-left h2 {
@@ -186,76 +100,3 @@
         margin-top: 30px;
     }
   }
-
-  footer {
-    background: black;
-    height: auto;
-    width: 100%;
-    font-family: 'demibold';
-    padding-top: 40px;
-    color: white;
-}
-
-.footer_content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-}
-
-.footer_content h3 {
-    font-size: 1.8rem;
-    font-weight: 400;
-    text-transform: capitalize;
-    line-height: true;
-}
-
-.footer_content p{
-    max-width: 500px;
-    margin: 10px auto;
-    line-height: 28px;
-    font-size: 14px;
-    color: #64c526;
-}
-
-.socials {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem 0 0rem 0;
-}
-
-.socials li {
-    margin: 0 10px;
-}
-
-.socials a i{
-    font-size: 30px;
-    transition: color .4s ease;
-    color: #04bccc;
-}
-
-.socials a:hover i {
-    color: aqua;
-}
-
-.footer_bottom {
-    background: black;
-    width: 100%;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.footer_bottom p {
-    font-size: 14px;
-    word-spacing: 2px;
-    text-transform: capitalize;
-}
-
-.footer_bottom span {
-    text-transform: uppercase;
-    font-weight: 200;
-    color: #de0552;
-}
