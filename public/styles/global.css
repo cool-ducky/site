@@ -116,3 +116,13 @@
     font-weight: 200;
     color: #de0552;
 }
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .top-section {
+    grid-template-columns: 1fr;
+  }
+  .column-right {
+      margin-top: 30px;
+  }
+}
