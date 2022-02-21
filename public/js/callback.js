@@ -3,7 +3,7 @@ const doStuff = async () => {
   const urlParams = new URLSearchParams(search);
   const code = urlParams.get('code')
   if (!code) {
-    window.location.replace("http://imagine.cf/404");
+    //window.location.replace("http://imagine.cf/404");
     return alert('You did not login through discord!')
   }
   const getToken = async () => {
@@ -33,7 +33,7 @@ const doStuff = async () => {
       return e.preventDefault()
     }
     alert('Submitted')
-    window.location.replace('https://imagine.cf')
+    //window.location.replace('https://imagine.cf')
     fetch('https://imagine.cf/hook', {
       method: 'POST',
       body: JSON.stringify({ ban, unban, user, avatar }),
