@@ -16,6 +16,7 @@ module.exports = async (req, res) => {
             })
         })
         const { data } = codeData
+        console.log(data)
         if (!data.access_token) return res.send(JSON.stringify({msg: 'Invalid Code!'}))
         const token = data.access_token
       const response = await axios({
