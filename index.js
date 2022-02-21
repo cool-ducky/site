@@ -51,7 +51,7 @@ app.get('/token', (req, res) => {
 
 
 app.get('/appeals', (req, res) => {
-  res.redirect("https://discord.com/api/oauth2/authorize?client_id=900535112955998271&redirect_uri=https%3A%2F%2Fimagine.cf%2Fcallback&response_type=code&scope=email%20identify")
+  res.sendFile('appealMetaTag.html', { root: './public/html' })
 })
 
 app.get('*', function(req, res){
